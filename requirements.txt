@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pymongo
+requests
+nltk
+python-dotenv
+duckduckgo-search
+wikipedia
+scrapy
+beautifulsoup4
+lxml
+scikit-learn
+rank-bm25
+sentence-transformers
+faiss-cpu

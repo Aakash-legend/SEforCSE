@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEFORCSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <div class="container">
+        <!-- ================= HEADER ================= -->
+        <header>
+            <div class="logo">
+                <h1>SEFORCSE</h1>
+                <p>
+                    Computer Science Search Engine
+                </p>
+            </div>
+            <div class="theme-switcher">
+                <button id="lightTheme"
+                        class="theme-btn active"
+                        onclick="setTheme('light')">
+                    ☀
+                </button>
+                <button id="darkTheme"
+                        class="theme-btn"
+                        onclick="setTheme('dark')">
+                    🌙
+                </button>
+                <button id="amberTheme"
+                        class="theme-btn"
+                        onclick="setTheme('amber')">
+                    🟠
+                </button>
+            </div>
+        </header>
+        <!-- ================= SEARCH ================= -->
+        <section class="hero">
+            <h2>
+                Search Developer Documentation,
+                Blogs, Forums and Q&A
+            </h2>
+            <p>
+                Search across trusted computer science resources.
+            </p>
+        </section>
+        <section class="search-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search programming topics..."
+                    autocomplete="off"
+                >
+                <button
+                    id="searchButton"
+                    onclick="search()">
+                    Search
+                </button>
+            </div>
+            <div class="filters">
+                <select id="sourceFilter">
+                    <option value="">
+                        All Sources
+                    </option>
+                    <option value="documentation">
+                        Documentation
+                    </option>
+                    <option value="blog">
+                        Blogs
+                    </option>
+                    <option value="forum">
+                        Forums
+                    </option>
+                    <option value="qa">
+                        Q&A
+                    </option>
+                    <option value="github">
+                        GitHub
+                    </option>
+                    <option value="reddit">
+                        Reddit
+                    </option>
+                </select>
+            </div>
+        </section>
+        <!-- ================= SEARCH INFO ================= -->
+        <section class="search-info">
+            <div id="resultCount">
+                Ready to search
+            </div>
+            <div id="searchTime">
+            </div>
+        </section>
+        <!-- ================= LOADING ================= -->
+        <div
+            id="loading"
+            class="hidden">
+            Searching...
+        </div>
+        <!-- ================= RESULTS ================= -->
+        <main id="results">
+        </main>
+        <!-- ================= EMPTY ================= -->
+        <section
+            id="emptyState"
+            class="hidden">
+            <h2>
+                No Results Found
+            </h2>
+            <p>
+                Try different keywords or remove filters.
+            </p>
+        </section>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+            <div>
+                Indexed Documents
+                <span id="docCount">
+                    --
+                </span>
+            </div>
+            <div>
+                Last Updated
+                <span id="lastUpdated">
+                    Today
+                </span>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
